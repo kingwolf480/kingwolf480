@@ -1,0 +1,51 @@
+#couleur de fond
+window.config(background='')
+
+#taille minimal
+window.minsize()
+
+#refinir taille fenetre
+    window.geometry()
+
+#bordure:
+    bd=1,relief = SUNKEN ds les arguement de Frame ou Label
+
+
+#pour qu'un bouton marque :
+    ds les propriété du bouton command = mettre la def de l'action a faire
+
+
+#ajouter une image ds la fenetre avec canvas :
+    width=
+    height=
+    image = PhotoImage(file="").zoom(35).subsample()
+    canvas = Canvas(window ou Frame, width=width, height=height, bg='', bd=bordure, highlightthickness=0)
+    canvas.create_image(width/2, height/2, image=image)
+    canvas.pack(expand=YES)
+
+
+pour mettre deux éléments un a droite et un a gauche :
+    .pack remplacer par .grid(row=0, column=0, sticky=W)
+    stycky : par ou ca compte
+
+mettre qqchose a droite ou gauche : side = LEFT RIGHT BOTTOM TOP  dans le .pack
+
+
+flat, groove, raised, ridge, solid, or sunken
+
+
+
+
+
+# ajoue d'un texte
+label_title = Label(frame, text="titre", font=("Arial", 40), bg='white', fg='black')
+label_title.pack()
+
+label_subtitle = Label(window, text="sous-titre", font=("Arial", 40), bg='white', fg='black')
+label_subtitle.pack()
+
+
+
+#ajouter un bouton
+button = Button(frame, text="boutton",font=("Arial", 40), bg='white', fg='black')
+button.pack(pady=50, fill=X)
